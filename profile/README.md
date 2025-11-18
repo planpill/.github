@@ -1,12 +1,85 @@
-## Hi there 👋
+# PlanPill (플랜필)
 
-<!--
+플랜필은 사용자가 복용하는 약·영양제 정보를 쉽고 정확하게 확인할 수 있도록 돕는 개인 맞춤형 복약 관리 서비스입니다.  
+알약을 촬영하면 AI가 제품을 자동 식별하고, 관련 정보를 간단히 정리해 제공하며, 기존 복용 이력과 새 제품 간의 조합·중복 여부를 함께 분석해 더 안전한 복약 결정을 지원합니다.
 
-**Here are some ideas to get you started:**
+---
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+## 📄 기획서 (Planning Document)
+
+- [2025년 새싹 해커톤 AI 서비스 기획서 [플랜필].pdf](https://github.com/planpill/docs/blob/main/2025%EB%85%84%20%EC%83%88%EC%8B%B9%20%ED%95%B4%EC%BB%A4%ED%86%A4%20AI%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B8%B0%ED%9A%8D%EC%84%9C%20%5B%ED%94%8C%EB%9E%9C%ED%95%84%5D.pdf)
+
+---
+
+## 🗂 프로젝트 레포지토리 구조 및 바로가기
+
+- **docs** — 기획 및 문서  
+  👉 https://github.com/planpill/docs
+
+- **backend** — API 서버  
+  👉 https://github.com/planpill/backend
+
+- **ai** — 이미지 인식·RAG 기반 분석  
+  👉 https://github.com/planpill/ai
+
+- **frontend** — 서비스 UI  
+  👉 https://github.com/planpill/frontend
+
+---
+
+## 🧩 서비스 개요
+
+### 서비스 주제
+약·영양제 정보를 자동 분석해 사용자의 상황에 맞춘 개인 복약 가이드를 제공하는 AI 기반 건강 관리 서비스.
+
+### 핵심 역할
+- 알약 촬영 → 분석 → 비교 → 루틴 관리까지 이어지는 복약 관리 전 과정 지원  
+- 복잡한 의약 정보를 간단하게 이해할 수 있도록 요약  
+- 복용 중 발생할 수 있는 위험 요소를 사전에 확인할 수 있도록 도움 제공
+
+---
+
+## 🧠 핵심 기능
+
+- 알약·영양제 자동 인식  
+- 제품 정보 요약 제공  
+- 복용 이력 기반 상호작용 분석  
+- 복약 루틴 관리(알림·기록)  
+- 간단한 AI 상담 기능  
+
+---
+
+## 🛠 기술 개요
+
+### **AI / Analysis**
+- **YOLOv8** 기반 알약 이미지 인식  
+- **RAG(VectorDB)** 기반 의약 정보 검색  
+- **LLM(Mistral / LLaMA3)** 기반 정보 요약·설명 생성  
+
+### **Backend**
+- **Spring Boot** API 서버  
+- **PostgreSQL** 데이터 저장소  
+- **JWT 인증**을 통한 사용자 보안 처리  
+
+### **Frontend**
+- **React 기반 Web/App UI**  
+- 촬영, 결과 확인, 루틴 관리 중심 인터페이스 구성  
+
+### **Data Sources**
+- 식약처 알약 이미지 데이터  
+- 낱알식별 정보  
+- 의약품·건강기능식품 공공 데이터  
+- DUR(병용금기/주의) 정보  
+
+---
+
+## 👥 팀 정보
+
+- **하명관** – 기획 / 콘텐츠 구성  
+- **고형준** – Backend / AI 아키텍처  
+- **이한솔** – UI/UX 디자인  
+
+---
+
+본 Repo는 플랜필 프로젝트의 문서 및 안내를 위한 메인 저장소이며,  
+실제 개발은 각 기능별 레포지토리에서 진행됩니다.
